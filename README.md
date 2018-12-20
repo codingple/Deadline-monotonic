@@ -11,4 +11,5 @@ The response time is setted to -1 when the '_t_' converges to infinity.
   
 ### Input  
 This program loads "input.txt", which contains the number of tasks at the first line and (computation time, deadline, period) of a single task each line. In addition, the tasks are sorted by the deadline before the begining.  
-  
+&nbsp;  
+![example](./dm_pic.png)
