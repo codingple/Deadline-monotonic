@@ -109,11 +109,16 @@ int main(void) {
         char s;
 
         // calculate response time with t
-        while (!IsResponstime(taskInfo[taskNum][0], taskNum, t, taskInfo))
+        while (!IsResponstime(taskInfo[taskNum][0], taskNum, t, taskInfo)){
             t = newT(taskNum, taskInfo, t);
+            if ( t < 0 ){
+                t = -1;
+                break;
+            }
+        }
 
         // evaluate schedulability
-        if ( t > D )
+        if ( t > D || t == -1)
             s = 'X';
         else
             s = 'O';
